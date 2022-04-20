@@ -1,9 +1,11 @@
 ## Rendering Nighttime Image Via Cascaded Color and Brightness Compensation
 
 <br/>
-
-<img src="imgs/cover.jpg"/>
-
+<center class="half">
+    <img src="imgs/raw.jpg" width="30%"/>  <img src="imgs/baseline.jpg" width="30%"/>  <img src="imgs/ours.jpg" width="30%"/>
+    <br/>
+    <em style="position:relative;left:-18%">RAW (visualized)</em> <em>Conventional ISP</em> <em style="position:relative;right:-18%">Our CBUnet</em>
+</center>
 <br/>
 
 #### 1. Overview [[Paper]](https://arxiv.org/pdf/2204.08970.pdf) [[Project Webpage]](https://njuvision.github.io/CBUnet/) [[Dataset]](https://drive.google.com/file/d/10aiSgLPS18PYq_FnhPmFiNh0ikTNK0ul/view?usp=sharing)
@@ -56,6 +58,7 @@ then copy the stage_2's checkpoint to `.pretrain/stage_2.pth`
 CUDA_VISIBLE_DEIVCES=0 python finetune.py -b 16 -d 0
 ```
 
+<br/>
 
 
 #### 5. Test the provided pre-trained models
@@ -64,6 +67,7 @@ CUDA_VISIBLE_DEIVCES=0 python finetune.py -b 16 -d 0
 python test.py --stage1 xxx.checkpoint --stage2 xxx.checkpoint --visual visualization
 ```
 
+<br/>
 
 #### 6. Citation
 
