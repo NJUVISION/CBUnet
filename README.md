@@ -39,24 +39,17 @@ python demo.py -i xxx.dng
 
 #### 4. Training the model
 
-Download the datasets from [[Dataset]](https://drive.google.com/file/d/10aiSgLPS18PYq_FnhPmFiNh0ikTNK0ul/view?usp=sharing) and edit the NR2R_ROOT in dataset.py
-
-Download the pretrained stage-1 from [cube++.pth](https://drive.google.com/file/d/1K8CgwXp0Pk7yPNUWXOF6zbK9iHgpiVDS/view?usp=sharing) and stage-2 from [p4_2.pkl](https://drive.google.com/file/d/1iR8dk1NStkiwl3gl3cjoGHKdu0D5Ck3a/view?usp=sharing) <sup>**</sup> and put them all in `.pretrain` folder.
-
-The model is trained stage by stage, start training from the stage-1:
-
+- Download the datasets from [[Dataset]](https://drive.google.com/file/d/10aiSgLPS18PYq_FnhPmFiNh0ikTNK0ul/view?usp=sharing) and edit the NR2R_ROOT in dataset.py
+- ownload the pretrained stage-1 from [cube++.pth](https://drive.google.com/file/d/1K8CgwXp0Pk7yPNUWXOF6zbK9iHgpiVDS/view?usp=sharing) and stage-2 from [p4_2.pkl](https://drive.google.com/file/d/1iR8dk1NStkiwl3gl3cjoGHKdu0D5Ck3a/view?usp=sharing) <sup>**</sup> and put them all in `.pretrain` folder.
+- The model is trained stage by stage, start training from the stage-1:
 ```bash
 CUDA_VISIBLE_DEIVCES=0 python train_stage_1.py -b 16 -d 0
 ```
-
-then copy the stage_1's checkpoint to `.pretrain/stage_1.pth`
-
+- then copy the stage_1's checkpoint to `.pretrain/stage_1.pth`
 ```bash
 CUDA_VISIBLE_DEIVCES=0 python train_stage_2.py -b 16 -d 0
 ```
-
-then copy the stage_2's checkpoint to `.pretrain/stage_2.pth`
-
+- then copy the stage_2's checkpoint to `.pretrain/stage_2.pth`
 ```bash
 CUDA_VISIBLE_DEIVCES=0 python finetune.py -b 16 -d 0
 ```
