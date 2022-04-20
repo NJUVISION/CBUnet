@@ -1,11 +1,14 @@
 ## Rendering Nighttime Image Via Cascaded Color and Brightness Compensation
 
 <br/>
-<center class="half">
-    <img src="imgs/raw.jpg" width="30%"/>  <img src="imgs/baseline.jpg" width="30%"/>  <img src="imgs/ours.jpg" width="30%"/>
-    <br/>
-    <em style="position:relative;left:-18%">RAW (visualized)</em> <em>Conventional ISP</em> <em style="position:relative;right:-18%">Our CBUnet</em>
-</center>
+<table>
+    <tr>
+        <td width="33%"><center><img src="imgs/raw.jpg">RAW (visualized)</center></td>
+        <td width="33%"><center><img src="imgs/baseline.jpg">Conventional ISP</center></td>
+        <td width="33%"><center><img src="imgs/ours.jpg">Our CBUnet</center></td>
+    </tr>
+</table>
+
 <br/>
 
 #### 1. Overview [[Paper]](https://arxiv.org/pdf/2204.08970.pdf) [[Project Webpage]](https://njuvision.github.io/CBUnet/) [[Dataset]](https://drive.google.com/file/d/10aiSgLPS18PYq_FnhPmFiNh0ikTNK0ul/view?usp=sharing)
@@ -79,9 +82,18 @@ python test.py --stage1 xxx.checkpoint --stage2 xxx.checkpoint --visual visualiz
   year={2020}
 }
 ```
+
 <br/>
 
 #### 7. Contact
+
+```
+Zhihao Li (lizhihao6_at_outlook.com)
+```
+
+<br/>
+
+#### 8. Thaks
 
 ```
 Zhihao Li (lizhihao6_at_outlook.com)
