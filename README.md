@@ -45,11 +45,11 @@ python demo.py -i xxx.dng
 ```bash
 CUDA_VISIBLE_DEIVCES=0 python train_stage_1.py -b 16 -d 0
 ```
-- then copy the stage_1's checkpoint to `.pretrain/stage_1.pth`
+- then copy the stage_1's checkpoint to `.pretrain/stage_1.checkpoint`
 ```bash
 CUDA_VISIBLE_DEIVCES=0 python train_stage_2.py -b 16 -d 0
 ```
-- then copy the stage_2's checkpoint to `.pretrain/stage_2.pth`
+- then copy the stage_2's checkpoint to `.pretrain/stage_2.checkpoint`
 ```bash
 CUDA_VISIBLE_DEIVCES=0 python finetune.py -b 16 -d 0
 ```

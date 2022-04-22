@@ -1,0 +1,5 @@
+DENOISING_CHECKPOINT = '.pretrain/dn_mwrcanet_raw_c1.pth'
+STAGE_1_PRETRAIN = '.pretrain/stage_1.checkpoint'
+STAGE_2_PRETRAIN = '.pretrain/stage_2.checkpoint'
+STAGE_1_CHECKPOINT = '.pretrain/stage_1.checkpoint'
+STAGE_2_CHECKPOINT = '.pretrain/stage_2.checkpoint'
